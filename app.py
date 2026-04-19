@@ -65,8 +65,13 @@ st.markdown("""
     
     .stApp {
         font-family: 'Inter', sans-serif;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-        color: #1e293b;
+        st.markdown("""
+<style>
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+</style>
+""", unsafe_allow_html=True)
     }
     
     /* ===== HEADER SECTION ===== */
