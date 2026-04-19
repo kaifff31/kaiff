@@ -76,6 +76,15 @@ body {
     
     /* ===== HEADER SECTION ===== */
     .main-header {
+       import streamlit as st
+
+st.markdown("""
+<style>
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+}
+</style>
+""", unsafe_allow_html=True)
         background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
         padding: 3rem 2.5rem;
         border-radius: 24px;
