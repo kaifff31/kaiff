@@ -6,7 +6,6 @@ import plotly.graph_objects as go
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
-<<<<<<< HEAD
 
 # ---------------- PAGE CONFIG ----------------
 =======
@@ -15,7 +14,6 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # ================ PAGE CONFIG ================
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
 st.set_page_config(
     page_title="Analytics Pro Dashboard",
     page_icon="📊",
@@ -23,7 +21,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-<<<<<<< HEAD
+
 # ---------------- CUSTOM CSS ----------------
 st.markdown("""
 <style>
@@ -92,12 +90,12 @@ st.markdown("""
         height: 500px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 50%;
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     }
     
     .main-header h1 {
         color: white;
-<<<<<<< HEAD
+
         font-size: 2.5rem;
         font-weight: 700;
         margin: 0;
@@ -304,12 +302,12 @@ st.markdown("""
         padding: 12px;
         border-radius: 18px;
         border: 1px solid #e2e8f0;
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     }
     
     .stTabs [data-baseweb="tab"] {
         background: transparent;
-<<<<<<< HEAD
+
         border-radius: 12px;
         padding: 12px 24px;
         font-weight: 500;
@@ -355,13 +353,12 @@ st.markdown("""
     }
     
     /* ===== BUTTONS ===== */
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
     .stButton > button {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: white;
         border: none;
         border-radius: 12px;
-<<<<<<< HEAD
+
         padding: 0.75rem 2rem;
         font-weight: 600;
         font-size: 1rem;
@@ -418,12 +415,12 @@ st.markdown("""
     }
     
     /* ===== SELECT BOXES & INPUTS ===== */
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     .stSelectbox > div > div {
         background: white;
         border-radius: 12px;
         border: 2px solid #e2e8f0;
-<<<<<<< HEAD
+
     }
     
     /* Dataframe */
@@ -458,14 +455,13 @@ st.markdown("""
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
         border-right: 2px solid rgba(102, 126, 234, 0.2);
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     }
     
     [data-testid="stSidebar"] .stMarkdown {
         color: white;
     }
     
-<<<<<<< HEAD
     [data-testid="stSidebar"] h1, 
     [data-testid="stSidebar"] h2, 
     [data-testid="stSidebar"] h3 {
@@ -509,12 +505,12 @@ st.markdown("""
         background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
         border-radius: 14px;
         border-left: 5px solid #ef4444;
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     }
     
     .stInfo {
         background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-<<<<<<< HEAD
+
         border-radius: 12px;
         border-left: 4px solid #3b82f6;
     }
@@ -587,14 +583,14 @@ st.markdown("""
             opacity: 1;
             transform: translateX(0);
         }
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     }
     
     .animate-fade {
         animation: fadeIn 0.6s ease-out forwards;
     }
     
-<<<<<<< HEAD
+
     /* Plotly Charts Container */
     .chart-container {
         background: white;
@@ -712,12 +708,11 @@ with st.sidebar:
     st.markdown("""
     <div style="text-align: center; padding: 2rem 0 1rem 0;">
         <h2 style="color: white; font-size: 1.8rem; margin-bottom: 0.5rem; font-family: 'Poppins', sans-serif; font-weight: 800;">⚡ Control Panel</h2>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
         <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">Configure your analysis</p>
     </div>
     """, unsafe_allow_html=True)
     
-<<<<<<< HEAD
     st.markdown("---")
     
     st.markdown('<p style="color: rgba(255,255,255,0.8); font-weight: 500; margin-bottom: 0.5rem;">📊 Chart Type</p>', unsafe_allow_html=True)
@@ -787,25 +782,23 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ================ FILE UPLOAD SECTION ================
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
 st.markdown("""
 <div class="glass-card">
     <div class="card-title">📁 Data Upload</div>
 </div>
 """, unsafe_allow_html=True)
 
-<<<<<<< HEAD
 col_upload, col_info = st.columns([2, 1])
 =======
 col_upload, col_info = st.columns([2.5, 1.5])
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
 
 with col_upload:
     file = st.file_uploader("Drag and drop your CSV file here", type=["csv"], label_visibility="collapsed")
 
 with col_info:
     st.markdown("""
-<<<<<<< HEAD
     <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1rem; border-radius: 12px; border-left: 4px solid #f59e0b;">
         <p style="margin: 0; color: #92400e; font-weight: 500;">💡 Tip</p>
         <p style="margin: 0.5rem 0 0 0; color: #78350f; font-size: 0.9rem;">Upload a CSV file to start exploring your data with interactive visualizations and AI predictions.</p>
@@ -813,23 +806,22 @@ with col_info:
     <div class="info-box">
         <h4>💡 Pro Tip</h4>
         <p>Upload a clean CSV file to unlock powerful visualizations, statistical analysis, and ML-powered predictions.</p>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     </div>
     """, unsafe_allow_html=True)
 
 if file:
     df = pd.read_csv(file)
 
-<<<<<<< HEAD
     # ---------------- DATA CLEANING ----------------
 =======
     # ================ DATA CLEANING ================
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     df.columns = df.columns.str.strip()
     df.drop_duplicates(inplace=True)
     df.fillna(0, inplace=True)
 
-<<<<<<< HEAD
+
     # ---------------- METRICS SECTION ----------------
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -839,48 +831,48 @@ if file:
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4, gap="medium")
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     
     with col1:
         st.markdown(f"""
         <div class="metric-card">
-<<<<<<< HEAD
+
             <div class="metric-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
 =======
             <div class="metric-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
                 📊
             </div>
             <div class="metric-value">{df.shape[0]:,}</div>
             <div class="metric-label">Total Rows</div>
-<<<<<<< HEAD
+
 =======
             <div class="metric-change">↑ Complete Dataset</div>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
         st.markdown(f"""
         <div class="metric-card">
-<<<<<<< HEAD
+
             <div class="metric-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
 =======
             <div class="metric-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
                 📋
             </div>
             <div class="metric-value">{df.shape[1]}</div>
             <div class="metric-label">Total Columns</div>
-<<<<<<< HEAD
+
 =======
             <div class="metric-change">↑ Features Available</div>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
         </div>
         """, unsafe_allow_html=True)
     
     with col3:
-<<<<<<< HEAD
+
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
@@ -898,13 +890,13 @@ if file:
             <div class="metric-value">{numeric_count}</div>
             <div class="metric-label">Numeric Columns</div>
             <div class="metric-change">↑ For Analysis</div>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
         </div>
         """, unsafe_allow_html=True)
     
     with col4:
         missing = df.isnull().sum().sum()
-<<<<<<< HEAD
+
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
@@ -913,12 +905,12 @@ if file:
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-icon" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white;">
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
                 ⚠️
             </div>
             <div class="metric-value">{missing}</div>
             <div class="metric-label">Missing Values</div>
-<<<<<<< HEAD
+
         </div>
         """, unsafe_allow_html=True)
 
@@ -939,7 +931,7 @@ if file:
     tab1, tab2, tab3, tab4 = st.tabs(["📋 Data Preview", "📊 Visualization", "🤖 AI Prediction", "📈 Statistics"])
 
     # ============ DATA TAB ============
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
     with tab1:
         st.markdown("""
         <div class="glass-card">
@@ -947,7 +939,7 @@ if file:
         </div>
         """, unsafe_allow_html=True)
         
-<<<<<<< HEAD
+
         col_data1, col_data2 = st.columns([3, 1])
         
         with col_data1:
@@ -956,12 +948,12 @@ if file:
         
         with col_data1:
             st.markdown('<p style="color: #64748b; font-weight: 600; margin-bottom: 1rem;">First 10 Rows</p>', unsafe_allow_html=True)
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             st.dataframe(df.head(10), use_container_width=True, height=400)
         
         with col_data2:
             st.markdown("""
-<<<<<<< HEAD
+
             <div style="background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
                 <h4 style="color: #1a1a2e; margin-bottom: 1rem;">📊 Column Types</h4>
             </div>
@@ -1052,7 +1044,7 @@ if file:
                 """, unsafe_allow_html=True)
 
     # ============ VISUALIZATION TAB ============
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
     with tab2:
         st.markdown("""
         <div class="glass-card">
@@ -1064,11 +1056,11 @@ if file:
         categorical_cols = df.select_dtypes(include=['object', 'category']).columns.tolist()
 
         if len(numeric_cols) > 0:
-<<<<<<< HEAD
+
             col_viz1, col_viz2, col_viz3 = st.columns(3)
 =======
             col_viz1, col_viz2, col_viz3 = st.columns(3, gap="medium")
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             
             with col_viz1:
                 x_col = st.selectbox("📍 X-Axis", numeric_cols, key="x_axis")
@@ -1082,7 +1074,7 @@ if file:
                 else:
                     color_col = "None"
 
-<<<<<<< HEAD
+
             # Create chart based on selection
             color_param = None if color_col == "None" else color_col
             
@@ -1092,12 +1084,11 @@ if file:
             st.markdown("<br>", unsafe_allow_html=True)
             
             # Create chart
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
             if chart_type == "Scatter":
                 if show_trendline:
                     fig = px.scatter(df, x=x_col, y=y_col, color=color_param, 
                                     trendline="ols", template=chart_theme,
-<<<<<<< HEAD
+
                                     title=f"{y_col} vs {x_col}")
                 else:
                     fig = px.scatter(df, x=x_col, y=y_col, color=color_param, 
@@ -1167,18 +1158,18 @@ if file:
                 height=550,
                 margin=dict(l=20, r=20, t=80, b=20),
                 hoverlabel=dict(bgcolor="white", font_size=12, font_family="Inter")
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             )
             
             st.plotly_chart(fig, use_container_width=True)
             
             # Correlation heatmap
-<<<<<<< HEAD
+
             st.markdown("<br>", unsafe_allow_html=True)
 =======
             st.markdown("""<div class="divider"></div>""", unsafe_allow_html=True)
             
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             st.markdown("""
             <div class="glass-card">
                 <div class="card-title">🔥 Correlation Heatmap</div>
@@ -1188,7 +1179,7 @@ if file:
             if len(numeric_cols) > 1:
                 corr_matrix = df[numeric_cols].corr()
                 fig_corr = px.imshow(corr_matrix, 
-<<<<<<< HEAD
+
                                      text_auto=True, 
                                      aspect="auto",
                                      color_continuous_scale="RdBu_r",
@@ -1212,7 +1203,7 @@ if file:
                 st.plotly_chart(fig_corr, use_container_width=True)
 
     # ============ PREDICTION TAB ============
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
     with tab3:
         st.markdown("""
         <div class="glass-card">
@@ -1220,7 +1211,7 @@ if file:
         </div>
         """, unsafe_allow_html=True)
 
-<<<<<<< HEAD
+
         col_pred1, col_pred2 = st.columns([1, 2])
         
         with col_pred1:
@@ -1236,13 +1227,13 @@ if file:
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 16px; color: white;">
                 <h4 style="margin: 0 0 1.5rem 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem;">⚙️ Config</h4>
                 <p style="font-size: 0.9rem; opacity: 0.9; margin: 0;">Random Forest Regressor</p>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             </div>
             """, unsafe_allow_html=True)
             
             st.markdown("<br>", unsafe_allow_html=True)
             
-<<<<<<< HEAD
+
             target = st.selectbox("🎯 Select Target Variable", numeric_cols)
             
             n_estimators = st.slider("🌲 Number of Trees", 10, 200, 100)
@@ -1257,13 +1248,12 @@ if file:
             test_size = st.slider("", 10, 40, 20, step=5, label_visibility="collapsed") / 100
             
             st.markdown("<br>", unsafe_allow_html=True)
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             
             run_model = st.button("🚀 Train Model", use_container_width=True)
         
         with col_pred2:
             if run_model:
-<<<<<<< HEAD
                 with st.spinner("Training model..."):
                     df_encoded = pd.get_dummies(df)
                     
@@ -1450,7 +1440,7 @@ if file:
                         st.error(f"❌ Error during model training: {str(e)}")
 
     # ============ STATISTICS TAB ============
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
     with tab4:
         st.markdown("""
         <div class="glass-card">
@@ -1458,7 +1448,7 @@ if file:
         </div>
         """, unsafe_allow_html=True)
         
-<<<<<<< HEAD
+
         st.dataframe(df.describe().T.style.background_gradient(cmap='Blues'), 
                     use_container_width=True)
         
@@ -1473,14 +1463,14 @@ if file:
         st.markdown("""<div class="divider"></div>""", unsafe_allow_html=True)
         
         # Distribution plots
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
         st.markdown("""
         <div class="glass-card">
             <div class="card-title">📊 Distribution Analysis</div>
         </div>
         """, unsafe_allow_html=True)
         
-<<<<<<< HEAD
+
         selected_col = st.selectbox("Select column for detailed analysis", numeric_cols)
         
         col_stat1, col_stat2 = st.columns(2)
@@ -1500,12 +1490,12 @@ if file:
                                    marginal="box",
                                    nbins=40)
             fig_hist.update_layout(height=450, title_font_size=18, font=dict(family="Inter"))
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             st.plotly_chart(fig_hist, use_container_width=True)
         
         with col_stat2:
             fig_box = px.box(df, y=selected_col, template=chart_theme,
-<<<<<<< HEAD
+
                             title=f"Box Plot of {selected_col}",
                             points="outliers")
             st.plotly_chart(fig_box, use_container_width=True)
@@ -1611,13 +1601,13 @@ if file:
             "⬇️ Statistics Report",
             df.describe().T.to_csv(),
             f"statistics_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+ 
             "text/csv",
             use_container_width=True
         )
 
 else:
-<<<<<<< HEAD
+
     # Empty state
     st.markdown("""
     <div style="text-align: center; padding: 4rem 2rem;">
@@ -1648,6 +1638,6 @@ else:
                 📈 Statistics
             </div>
         </div>
->>>>>>> 5db56a8da8826f2d0dab8f7778a63b5785b2fbef
+
     </div>
     """, unsafe_allow_html=True)
